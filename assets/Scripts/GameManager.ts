@@ -54,12 +54,7 @@ export class GameManager extends Component {
     DoSomething(h: Hexa) {
         if (h.isValidate) return;
         h.isValidate = true;
-        if (h.listNodeConnect.length <= 0) {
-            h.isLight = false;
-        } else {
-            h.isLight = true;
-        }
-
+        h.isLight = true;
         h.CheckLight(h.isLight);
 
     }
