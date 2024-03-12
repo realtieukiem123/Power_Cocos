@@ -26,19 +26,10 @@
     "_components": [
       {
         "__id__": 46
-      },
-      {
-        "__id__": 48
-      },
-      {
-        "__id__": 50
-      },
-      {
-        "__id__": 52
       }
     ],
     "_prefab": {
-      "__id__": 54
+      "__id__": 48
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -144,7 +135,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 4
@@ -1054,6 +1045,7 @@
     "__prefab": {
       "__id__": 44
     },
+    "listNodeConnect": [],
     "speedRotate": 0.125,
     "isPower": false,
     "isLight": false,
@@ -1106,89 +1098,6 @@
   {
     "__type__": "cc.CompPrefabInfo",
     "fileId": "4e99hhqzNKq49Z2j6DAa4P"
-  },
-  {
-    "__type__": "cc.CircleCollider2D",
-    "_name": "",
-    "_objFlags": 0,
-    "__editorExtras__": {},
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 49
-    },
-    "tag": 1,
-    "_group": 1,
-    "_density": 1,
-    "_sensor": true,
-    "_friction": 0.2,
-    "_restitution": 0,
-    "_offset": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_radius": 56.5,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "e7JSebsChPzraoZsJPMVKv"
-  },
-  {
-    "__type__": "cc.RigidBody2D",
-    "_name": "",
-    "_objFlags": 0,
-    "__editorExtras__": {},
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 51
-    },
-    "enabledContactListener": true,
-    "bullet": false,
-    "awakeOnLoad": true,
-    "_group": 1,
-    "_type": 1,
-    "_allowSleep": true,
-    "_gravityScale": 1,
-    "_linearDamping": 0,
-    "_angularDamping": 0,
-    "_linearVelocity": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_angularVelocity": 0,
-    "_fixedRotation": false,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "95t929kzlKraXAott0KaUf"
-  },
-  {
-    "__type__": "31963PGzilJLqVd7vzkqZ0Y",
-    "_name": "",
-    "_objFlags": 0,
-    "__editorExtras__": {},
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 53
-    },
-    "listNodeAround": [],
-    "_id": ""
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "6461BcD2dO7YjctKnXio+3"
   },
   {
     "__type__": "cc.PrefabInfo",

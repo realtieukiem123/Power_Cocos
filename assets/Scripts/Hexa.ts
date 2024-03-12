@@ -27,7 +27,7 @@ export class Hexa extends Component {
 
 
     onLoad() {
-
+        this.corner = this.node.angle;
         this.button = this.getComponent(Button);
         this.button.node.on(Button.EventType.CLICK, this.rotate, this);
 
@@ -73,7 +73,7 @@ export class Hexa extends Component {
     // }
 
     rotate(button: Button) {
-        
+
         this.listNodeConnect = [];
 
         if (this.isClick || this.isPower) return;
@@ -101,7 +101,7 @@ export class Hexa extends Component {
                             GameManager.Instance.DFS(e);
                             GameManager.Instance.ResetValidate();
                         }
-        
+
                     })
                 }
             })
@@ -110,15 +110,15 @@ export class Hexa extends Component {
 
     onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null) {
         if (otherCollider.tag == 0) {
-            console.log(selfCollider.node.parent.name +"|" + otherCollider.node.parent.name)
+            console.log(selfCollider.node.parent.name + "|" + otherCollider.node.parent.name)
             // console.log('light on' + this.node.name);
             this.listNodeConnect.push(otherCollider.node.parent);
         }
     }
     onEndContact(selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null) {
-        if(otherCollider.tag == 0 && !this.isClick){
+        if (otherCollider.tag == 0 && !this.isClick) {
             let i = this.listNodeConnect.indexOf(otherCollider.node.parent);
-            this.listNodeConnect.splice(i,1);
+            this.listNodeConnect.splice(i, 1);
         }
         if (otherCollider.tag == 0 && this.isClick && !otherCollider.node.parent.getComponent(Hexa).isPower) {
             HandleAfterRotate.instance.listEnd.push(otherCollider.node.parent);
