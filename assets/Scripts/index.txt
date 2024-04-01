@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>N158 | Building Energy</title>
+
+  <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+  <meta name="viewport"
+    content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui=true" />
+
+  <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- force webkit on 360 -->
+  <meta name="renderer" content="webkit" />
+  <meta name="force-rendering" content="webkit" />
+  <!-- force edge on IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- force full screen on some browser -->
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="360-fullscreen" content="true" />
+
+  <!--fix fireball/issues/3568 -->
+  <!--<meta name="browsermode" content="application">-->
+  <meta name="x5-page-mode" content="app">
+
+  <!--<link rel="apple-touch-icon" href=".png" />-->
+  <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+  <div id="GameDiv" cc_exact_fit_screen="true">
+    <div id="Cocos3dGameContainer">
+      <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="99"></canvas>
+    </div>
+  </div>
+
+
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6YTCH8G75"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-F6YTCH8G75');
+  </script>
+
+
+  <!-- gtag account admin-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2LRRBWR46Y"></script>
+  <script>
+    function gtag2() {
+      dataLayer.push(arguments);
+    }
+    gtag2('js', new Date());
+    gtag2('config', 'G-2LRRBWR46Y');
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics-compat.js"></script>
+  <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCSvfnlOgtJimnNQdIbIa3wpRH8_Z4iop4",
+      authDomain: "web-n158.firebaseapp.com",
+      projectId: "web-n158",
+      storageBucket: "web-n158.appspot.com",
+      messagingSenderId: "632937339353",
+      appId: "1:632937339353:web:e64a7175e1278d2b6061c8",
+      measurementId: "G-F6YTCH8G75"
+    };
+
+
+    const firebaseConfigAdmin = {
+      apiKey: "AIzaSyBrpOvGsqh7UxE8N5ik9bgxkg5pivLFGDA",
+      authDomain: "web-admin-5af26.firebaseapp.com",
+      projectId: "web-admin-5af26",
+      storageBucket: "web-admin-5af26.appspot.com",
+      messagingSenderId: "463142367422",
+      appId: "1:463142367422:web:fe04b42db9d56eaafeeeef",
+      measurementId: "G-2LRRBWR46Y"
+    };
+
+
+    const firebaseApp = firebase.initializeApp(firebaseConfig, "mainApp");
+
+
+    const firebaseAdmin = firebase.initializeApp(firebaseConfigAdmin, "adminApp");
+    function sendLogEventAdmin(name, data) {
+      firebaseAdmin.analytics().logEvent(name, data);
+    }
+    function sendLogEvent(name, data) {
+      firebaseApp.analytics().logEvent(name, data);
+    }
+    if (document.referrer) {
+      sendLogEvent("LINK_PAGE: ", document.referrer)
+    }
+    else {
+      sendLogEvent("direct");
+    }
+  </script>
+  <script>
+    window.myGameConfig = {
+      url_config_game: "https://config.namigame.online/game-config/config_game_n158.txt",
+      ads_inter_time: 180,
+      pogame_id: "cd8dcc7870494bd999b850c1d986dca1",
+      is_pogame: 1
+    };
+  </script>
+
+
+
+
+
+  <!-- Polyfills bundle. -->
+
+  <script src="src/polyfills.bundle.js" charset="utf-8"> </script>
+
+
+  <!-- SystemJS support. -->
+  <script src="src/system.bundle.js" charset="utf-8"> </script>
+
+  <!-- Import map -->
+  <script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"> </script>
+
+  <script>
+    System.import('./index.js').catch(function (err) { console.error(err); })
+  </script>
+
+</body>
+
+</html>
